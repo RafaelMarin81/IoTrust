@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.CPP</ToolchainName>
+    <ProjectGuid>{94d298ab-ef25-442d-a385-57d58cab3776}</ProjectGuid>
+    <avrdevice>ATSAMD21J18A</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>test</AssemblyName>
+    <Name>Lion_validation</Name>
+    <RootNamespace>test</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>false</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.19.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <avrtoolinterface>SWD</avrtoolinterface>
+    <com_atmel_avrdbg_tool_samice>
+      <ToolOptions>
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.samice</ToolType>
+      <ToolNumber>28010306</ToolNumber>
+      <ToolName>SAM-ICE</ToolName>
+    </com_atmel_avrdbg_tool_samice>
+    <UseGdb>True</UseGdb>
+    <com_atmel_avrdbg_tool_edbg>
+      <ToolOptions>
+        <InterfaceProperties>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.edbg</ToolType>
+      <ToolNumber>ATML2320021800000007</ToolNumber>
+      <ToolName>EDBG</ToolName>
+    </com_atmel_avrdbg_tool_edbg>
+    <preserveEEPROM>true</preserveEEPROM>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <SwdClock>2000000</SwdClock>
+        </InterfaceProperties>
+        <InterfaceName>SWD</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800034663</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+    <ExternalProgrammingToolCommand />
+    <avrtoolserialnumber>J41800034663</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x10010000</avrdeviceexpectedsignature>
+    <avrtoolinterfaceclock>2000000</avrtoolinterfaceclock>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+        <armgcc.common.outputfiles.hex>False</armgcc.common.outputfiles.hex>
+        <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+        <armgcc.common.outputfiles.eep>False</armgcc.common.outputfiles.eep>
+        <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+        <armgcc.common.outputfiles.srec>False</armgcc.common.outputfiles.srec>
+        <armgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</armgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <armgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>F_CPU=48000000L</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x004d</Value>
+            <Value>USBCON</Value>
+            <Value>DEBUG</Value>
+            <Value>ARDUINO_SAMD_SMARTEVERYTHING</Value>
+          </ListValues>
+        </armgcc.compiler.symbols.DefSymbols>
+        <armgcc.compiler.directories.DefaultIncludePath>False</armgcc.compiler.directories.DefaultIncludePath>
+        <armgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../../../../fox2-arduino-core/variants/Fox</Value>
+            <Value>../../../../ArduinoCore-samd/hardware/arduino/samd/cores/arduino/USB</Value>
+            <Value>../../../../ArduinoCore-samd/hardware/arduino/samd/cores/arduino</Value>
+            <Value>../../../../ArduinoCore-samd/hardware/arduino/samd/libraries/Wire</Value>
+            <Value>../../../../ArduinoCore-samd/hardware/arduino/samd/libraries/SPI</Value>
+            <Value>../../../../ArduinoZero/hardware/tools/CMSIS/Device/ATMEL</Value>
+            <Value>../../../../ArduinoZero/hardware/tools/CMSIS/CMSIS/Include</Value>
+            <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
+            <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+          </ListValues>
+        </armgcc.compiler.directories.IncludePaths>
+        <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcc.compiler.optimization.PrepareDataForGarbageCollection>True</armgcc.compiler.optimization.PrepareDataForGarbageCollection>
+        <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+        <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+        <armgcc.compiler.miscellaneous.OtherFlags>-std=c99 -fno-common</armgcc.compiler.miscellaneous.OtherFlags>
+        <armgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</armgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <armgcccpp.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>F_CPU=48000000L</Value>
+            <Value>DEBUG</Value>
+            <Value>USB_VID=0x2341</Value>
+            <Value>USB_PID=0x004d</Value>
+            <Value>USBCON</Value>
+            <Value>ARDUINO_SAMD_SMARTEVERYTHING</Value>
+          </ListValues>
+        </armgcccpp.compiler.symbols.DefSymbols>
+        <armgcccpp.compiler.directories.DefaultIncludePath>False</armgcccpp.compiler.directories.DefaultIncludePath>
+        <armgcccpp.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>../../../../fox2-arduino-core/variants/Fox</Value>
+            <Value>../../../../ArduinoCore-samd/hardware/arduino/samd/cores/arduino/USB</Value>
+            <Value>../../../../ArduinoCore-samd/hardware/arduino/samd/cores/arduino</Value>
+            <Value>../../../../ArduinoCore-samd/hardware/arduino/samd/libraries/Wire</Value>
+            <Value>../../../../ArduinoCore-samd/hardware/arduino/samd/libraries/SPI</Value>
+            <Value>../../../../ArduinoZero/hardware/tools/CMSIS/Device/ATMEL</Value>
+            <Value>../../../../ArduinoZero/hardware/tools/CMSIS/CMSIS/Include</Value>
+            <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
+            <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+          </ListValues>
+        </armgcccpp.compiler.directories.IncludePaths>
+        <armgcccpp.compiler.optimization.level>Optimize (-O1)</armgcccpp.compiler.optimization.level>
+        <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+        <armgcccpp.compiler.optimization.PrepareDataForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareDataForGarbageCollection>
+        <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
+        <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+        <armgcccpp.compiler.miscellaneous.OtherFlags>-std=c++98 -fno-common</armgcccpp.compiler.miscellaneous.OtherFlags>
+        <armgcccpp.linker.general.UseNewlibNano>True</armgcccpp.linker.general.UseNewlibNano>
+        <armgcccpp.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </armgcccpp.linker.libraries.Libraries>
+        <armgcccpp.linker.libraries.LibrarySearchPaths>
+          <ListValues>
+            <Value>../../../../fox2-arduino-core/variants/Fox/linker_scripts/gcc</Value>
+            <Value>%24(ProjectDir)\Device_Startup</Value>
+          </ListValues>
+        </armgcccpp.linker.libraries.LibrarySearchPaths>
+        <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+        <armgcccpp.linker.memorysettings.ExternalRAM />
+        <armgcccpp.linker.miscellaneous.LinkerFlags>--specs=nosys.specs  -Tsamd21j18a_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+        <armgcccpp.assembler.debugging.DebugLevel>Default (-g)</armgcccpp.assembler.debugging.DebugLevel>
+        <armgcccpp.preprocessingassembler.general.DefaultIncludePath>False</armgcccpp.preprocessingassembler.general.DefaultIncludePath>
+        <armgcccpp.preprocessingassembler.general.IncludePaths>
+          <ListValues>
+            <Value>../../../arduino</Value>
+            <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
+            <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+          </ListValues>
+        </armgcccpp.preprocessingassembler.general.IncludePaths>
+        <armgcccpp.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.preprocessingassembler.debugging.DebugLevel>
+      </ArmGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+  <armgcc.common.outputfiles.hex>False</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>False</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>False</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</armgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>F_CPU=48000000L</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x004d</Value>
+      <Value>USBCON</Value>
+      <Value>DEBUG</Value>
+      <Value>ARDUINO_SAMD_SMARTEVERYTHING</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.DefaultIncludePath>False</armgcc.compiler.directories.DefaultIncludePath>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../../../../../../../../arduino/tools/CMSIS/4.0.0-atmel/CMSIS/Include</Value>
+      <Value>../../../../../../../../arduino/tools/CMSIS/4.0.0-atmel/Device/ATMEL</Value>
+      <Value>../../../../../../../../AppData/Local/Arduino15/packages/arduino/hardware/samd/1.6.6/cores/arduino/USB</Value>
+      <Value>../../../../../../../../AppData/Local/Arduino15/packages/arduino/hardware/samd/1.6.6/cores/arduino</Value>
+      <Value>C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino</Value>
+      <Value>../../../../variants/Lion</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.optimization.PrepareDataForGarbageCollection>True</armgcc.compiler.optimization.PrepareDataForGarbageCollection>
+  <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcc.compiler.miscellaneous.OtherFlags>-std=c99 -fno-common</armgcc.compiler.miscellaneous.OtherFlags>
+  <armgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</armgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <armgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>F_CPU=48000000L</Value>
+      <Value>DEBUG</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x004d</Value>
+      <Value>USBCON</Value>
+      <Value>ARDUINO_SAMD_SMARTEVERYTHING</Value>
+    </ListValues>
+  </armgcccpp.compiler.symbols.DefSymbols>
+  <armgcccpp.compiler.directories.DefaultIncludePath>False</armgcccpp.compiler.directories.DefaultIncludePath>
+  <armgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>../../../../../../../../arduino/tools/CMSIS/4.0.0-atmel/CMSIS/Include</Value>
+      <Value>../../../../../../../../arduino/tools/CMSIS/4.0.0-atmel/Device/ATMEL</Value>
+      <Value>../../../../../smeLibraries/sme-RN2483-library/sme-rn2483-library/src/lora</Value>
+      <Value>../../../../../smeLibraries/sme-RN2483-library/sme-rn2483-library/src</Value>
+      <Value>../../../../../../../../AppData/Local/Arduino15/packages/arduino/hardware/samd/1.6.6/cores/arduino/USB</Value>
+      <Value>../../../../../../../../AppData/Local/Arduino15/packages/arduino/hardware/samd/1.6.6/cores/arduino</Value>
+      <Value>../../../../../../../../AppData/Local/Arduino15/packages/arduino/hardware/samd/1.6.6/libraries/SPI</Value>
+      <Value>../../../../../../../../AppData/Local/Arduino15/packages/arduino/hardware/samd/1.6.6/libraries/Wire</Value>
+      <Value>../../../../../../../../../../MyProgram/Hw/arduino/hardware/tools</Value>
+      <Value>C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino</Value>
+      <Value>../../../../variants/Lion</Value>
+    </ListValues>
+  </armgcccpp.compiler.directories.IncludePaths>
+  <armgcccpp.compiler.optimization.level>Optimize (-O1)</armgcccpp.compiler.optimization.level>
+  <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcccpp.compiler.optimization.PrepareDataForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareDataForGarbageCollection>
+  <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
+  <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+  <armgcccpp.compiler.miscellaneous.OtherFlags>-std=c++98 -fno-common</armgcccpp.compiler.miscellaneous.OtherFlags>
+  <armgcccpp.linker.general.UseNewlibNano>True</armgcccpp.linker.general.UseNewlibNano>
+  <armgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.Libraries>
+  <armgcccpp.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>../../../../variants/Fox/linker_scripts/gcc</Value>
+      <Value>%24(ProjectDir)\Device_Startup</Value>
+    </ListValues>
+  </armgcccpp.linker.libraries.LibrarySearchPaths>
+  <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+  <armgcccpp.linker.memorysettings.ExternalRAM />
+  <armgcccpp.linker.miscellaneous.LinkerFlags>--specs=nosys.specs  -Tflash_without_bootloader.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+  <armgcccpp.assembler.debugging.DebugLevel>Default (-g)</armgcccpp.assembler.debugging.DebugLevel>
+  <armgcccpp.preprocessingassembler.general.DefaultIncludePath>False</armgcccpp.preprocessingassembler.general.DefaultIncludePath>
+  <armgcccpp.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>../../../arduino</Value>
+      <Value>%24(PackRepoDir)\atmel\SAMD21_DFP\1.0.222\samd21a\include</Value>
+      <Value>%24(PackRepoDir)\arm\cmsis\4.2.0\CMSIS\Include\</Value>
+    </ListValues>
+  </armgcccpp.preprocessingassembler.general.IncludePaths>
+  <armgcccpp.preprocessingassembler.debugging.DebugLevel>Default (-Wa,-g)</armgcccpp.preprocessingassembler.debugging.DebugLevel>
+</ArmGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="core\USB" />
+    <Folder Include="core" />
+    <Folder Include="tools" />
+    <Folder Include="Wire" />
+    <Folder Include="SPI" />
+    <Folder Include="variant" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\test.cpp">
+      <SubType>compile</SubType>
+      <Link>test.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\abi.cpp">
+      <SubType>compile</SubType>
+      <Link>core\abi.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\Arduino.h">
+      <SubType>compile</SubType>
+      <Link>core\Arduino.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\binary.h">
+      <SubType>compile</SubType>
+      <Link>core\binary.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\Client.h">
+      <SubType>compile</SubType>
+      <Link>core\Client.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\cortex_handlers.c">
+      <SubType>compile</SubType>
+      <Link>core\cortex_handlers.c</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\delay.c">
+      <SubType>compile</SubType>
+      <Link>core\delay.c</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\delay.h">
+      <SubType>compile</SubType>
+      <Link>core\delay.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\HardwareSerial.h">
+      <SubType>compile</SubType>
+      <Link>core\HardwareSerial.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\hooks.c">
+      <SubType>compile</SubType>
+      <Link>core\hooks.c</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\IPAddress.cpp">
+      <SubType>compile</SubType>
+      <Link>core\IPAddress.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\IPAddress.h">
+      <SubType>compile</SubType>
+      <Link>core\IPAddress.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\itoa.c">
+      <SubType>compile</SubType>
+      <Link>core\itoa.c</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\itoa.h">
+      <SubType>compile</SubType>
+      <Link>core\itoa.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\main.cpp">
+      <SubType>compile</SubType>
+      <Link>core\main.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\new.cpp">
+      <SubType>compile</SubType>
+      <Link>core\new.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\Print.cpp">
+      <SubType>compile</SubType>
+      <Link>core\Print.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\Print.h">
+      <SubType>compile</SubType>
+      <Link>core\Print.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\Printable.h">
+      <SubType>compile</SubType>
+      <Link>core\Printable.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\pulse.c">
+      <SubType>compile</SubType>
+      <Link>core\pulse.c</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\pulse.h">
+      <SubType>compile</SubType>
+      <Link>core\pulse.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\pulse_asm.S">
+      <SubType>compile</SubType>
+      <Link>core\pulse_asm.S</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\Reset.cpp">
+      <SubType>compile</SubType>
+      <Link>core\Reset.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\Reset.h">
+      <SubType>compile</SubType>
+      <Link>core\Reset.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\RingBuffer.cpp">
+      <SubType>compile</SubType>
+      <Link>core\RingBuffer.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\RingBuffer.h">
+      <SubType>compile</SubType>
+      <Link>core\RingBuffer.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\SERCOM.cpp">
+      <SubType>compile</SubType>
+      <Link>core\SERCOM.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\SERCOM.h">
+      <SubType>compile</SubType>
+      <Link>core\SERCOM.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\Server.h">
+      <SubType>compile</SubType>
+      <Link>core\Server.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\startup.c">
+      <SubType>compile</SubType>
+      <Link>core\startup.c</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\Stream.cpp">
+      <SubType>compile</SubType>
+      <Link>core\Stream.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\Stream.h">
+      <SubType>compile</SubType>
+      <Link>core\Stream.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\Tone.cpp">
+      <SubType>compile</SubType>
+      <Link>core\Tone.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\Tone.h">
+      <SubType>compile</SubType>
+      <Link>core\Tone.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\Uart.cpp">
+      <SubType>compile</SubType>
+      <Link>core\Uart.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\Uart.h">
+      <SubType>compile</SubType>
+      <Link>core\Uart.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\Udp.h">
+      <SubType>compile</SubType>
+      <Link>core\Udp.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\USB\CDC.cpp">
+      <SubType>compile</SubType>
+      <Link>core\USB\CDC.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\USB\PluggableUSB.cpp">
+      <SubType>compile</SubType>
+      <Link>core\USB\PluggableUSB.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\USB\PluggableUSB.h">
+      <SubType>compile</SubType>
+      <Link>core\USB\PluggableUSB.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\USB\samd21_host.c">
+      <SubType>compile</SubType>
+      <Link>core\USB\samd21_host.c</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\USB\samd21_host.h">
+      <SubType>compile</SubType>
+      <Link>core\USB\samd21_host.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\USB\SAMD21_USBDevice.h">
+      <SubType>compile</SubType>
+      <Link>core\USB\SAMD21_USBDevice.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\USB\USBAPI.h">
+      <SubType>compile</SubType>
+      <Link>core\USB\USBAPI.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\USB\USBCore.cpp">
+      <SubType>compile</SubType>
+      <Link>core\USB\USBCore.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\USB\USBCore.h">
+      <SubType>compile</SubType>
+      <Link>core\USB\USBCore.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\USB\USBDesc.h">
+      <SubType>compile</SubType>
+      <Link>core\USB\USBDesc.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\USB\USB_host.h">
+      <SubType>compile</SubType>
+      <Link>core\USB\USB_host.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\WCharacter.h">
+      <SubType>compile</SubType>
+      <Link>core\WCharacter.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\WInterrupts.c">
+      <SubType>compile</SubType>
+      <Link>core\WInterrupts.c</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\WInterrupts.h">
+      <SubType>compile</SubType>
+      <Link>core\WInterrupts.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\wiring.c">
+      <SubType>compile</SubType>
+      <Link>core\wiring.c</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\wiring.h">
+      <SubType>compile</SubType>
+      <Link>core\wiring.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\wiring_analog.c">
+      <SubType>compile</SubType>
+      <Link>core\wiring_analog.c</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\wiring_analog.h">
+      <SubType>compile</SubType>
+      <Link>core\wiring_analog.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\wiring_constants.h">
+      <SubType>compile</SubType>
+      <Link>core\wiring_constants.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\wiring_digital.c">
+      <SubType>compile</SubType>
+      <Link>core\wiring_digital.c</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\wiring_digital.h">
+      <SubType>compile</SubType>
+      <Link>core\wiring_digital.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\wiring_private.c">
+      <SubType>compile</SubType>
+      <Link>core\wiring_private.c</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\wiring_private.h">
+      <SubType>compile</SubType>
+      <Link>core\wiring_private.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\wiring_shift.c">
+      <SubType>compile</SubType>
+      <Link>core\wiring_shift.c</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\wiring_shift.h">
+      <SubType>compile</SubType>
+      <Link>core\wiring_shift.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\WMath.cpp">
+      <SubType>compile</SubType>
+      <Link>core\WMath.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\WMath.h">
+      <SubType>compile</SubType>
+      <Link>core\WMath.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\WString.cpp">
+      <SubType>compile</SubType>
+      <Link>core\WString.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\WString.h">
+      <SubType>compile</SubType>
+      <Link>core\WString.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\cores\arduino\WVariant.h">
+      <SubType>compile</SubType>
+      <Link>core\WVariant.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\libraries\SPI\SPI.cpp">
+      <SubType>compile</SubType>
+      <Link>SPI\SPI.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\libraries\SPI\SPI.h">
+      <SubType>compile</SubType>
+      <Link>SPI\SPI.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\libraries\Wire\Wire.cpp">
+      <SubType>compile</SubType>
+      <Link>Wire\Wire.cpp</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\hardware\samd\1.6.8\libraries\Wire\Wire.h">
+      <SubType>compile</SubType>
+      <Link>Wire\Wire.h</Link>
+    </Compile>
+    <Compile Include="C:\Users\speirano\AppData\Local\Arduino15\packages\arduino\tools\CMSIS\4.0.0-atmel\Device\ATMEL\sam.h">
+      <SubType>compile</SubType>
+      <Link>tools\sam.h</Link>
+    </Compile>
+    <Compile Include="Y:\Lion\smarteverything-core\variants\Lion\internalI2C.cpp">
+      <SubType>compile</SubType>
+      <Link>variant\internalI2C.cpp</Link>
+    </Compile>
+    <Compile Include="Y:\Lion\smarteverything-core\variants\Lion\internalI2C.h">
+      <SubType>compile</SubType>
+      <Link>variant\internalI2C.h</Link>
+    </Compile>
+    <Compile Include="Y:\Lion\smarteverything-core\variants\Lion\pins_arduino.h">
+      <SubType>compile</SubType>
+      <Link>variant\pins_arduino.h</Link>
+    </Compile>
+    <Compile Include="Y:\Lion\smarteverything-core\variants\Lion\variant.cpp">
+      <SubType>compile</SubType>
+      <Link>variant\variant.cpp</Link>
+    </Compile>
+    <Compile Include="Y:\Lion\smarteverything-core\variants\Lion\variant.h">
+      <SubType>compile</SubType>
+      <Link>variant\variant.h</Link>
+    </Compile>
+    <Compile Include="Y:\Lion\smarteverything-core\variants\Lion\variantInit.cpp">
+      <SubType>compile</SubType>
+      <Link>variant\variantInit.cpp</Link>
+    </Compile>
+    <Compile Include="Y:\Lion\smarteverything-core\variants\Lion\WireIoExt.cpp">
+      <SubType>compile</SubType>
+      <Link>variant\WireIoExt.cpp</Link>
+    </Compile>
+    <Compile Include="Y:\Lion\smarteverything-core\variants\Lion\WireIoExt.h">
+      <SubType>compile</SubType>
+      <Link>variant\WireIoExt.h</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

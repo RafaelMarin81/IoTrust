@@ -1,0 +1,55 @@
+{
+  "files" : [ {
+    "remoteURL" : "https://downloads.arduino.cc/libraries/library_index.json.gz",
+    "localPath" : "/home/jsanchez/git_repo_iostrust/arduino-1.8.13/portable/cache/downloads.arduino.cc/libraries/library_index.json.gz",
+    "eTag" : "1e486b1b2e56d16be16f1a3a38f00f0e",
+    "md5" : "MD5:1e486b1b2e56d16be16f1a3a38f00f0e",
+    "createdAt" : "2021-01-11T13:50:05.885",
+    "cacheControl" : {
+      "maxAge" : 14400,
+      "mustRevalidate" : false,
+      "noCache" : false,
+      "noStore" : false
+    },
+    "expires" : "2021-01-11T17:50:05.885"
+  }, {
+    "remoteURL" : "https://downloads.arduino.cc/packages/package_index.json.sig",
+    "localPath" : "/home/jsanchez/git_repo_iostrust/arduino-1.8.13/portable/cache/downloads.arduino.cc/packages/package_index.json.sig",
+    "eTag" : "704ffc1e85d51419342b6930c9b33d0e",
+    "md5" : "MD5:704ffc1e85d51419342b6930c9b33d0e",
+    "createdAt" : "2021-01-11T13:50:05.463",
+    "cacheControl" : {
+      "maxAge" : 3600,
+      "mustRevalidate" : false,
+      "noCache" : false,
+      "noStore" : false
+    },
+    "expires" : "2021-01-11T14:50:05.463"
+  }, {
+    "remoteURL" : "https://downloads.arduino.cc/libraries/library_index.json.sig",
+    "localPath" : "/home/jsanchez/git_repo_iostrust/arduino-1.8.13/portable/cache/downloads.arduino.cc/libraries/library_index.json.sig",
+    "eTag" : "b1a5a0ea68845ac0bd828195b9b2367f",
+    "md5" : "MD5:b1a5a0ea68845ac0bd828195b9b2367f",
+    "createdAt" : "2021-01-11T13:50:06.221",
+    "cacheControl" : {
+      "maxAge" : 14400,
+      "mustRevalidate" : false,
+      "noCache" : false,
+      "noStore" : false
+    },
+    "expires" : "2021-01-11T17:50:06.221"
+  }, {
+    "remoteURL" : "https://downloads.arduino.cc/packages/package_index.json",
+    "localPath" : "/home/jsanchez/git_repo_iostrust/arduino-1.8.13/portable/cache/downloads.arduino.cc/packages/package_index.json",
+    "eTag" : "49bbc5966849aeba610d68aafdc6276b",
+    "md5" : "MD5:49bbc5966849aeba610d68aafdc6276b",
+    "createdAt" : "2021-01-11T13:50:05.191",
+    "cacheControl" : {
+      "maxAge" : 3600,
+      "mustRevalidate" : false,
+      "noCache" : false,
+      "noStore" : false
+    },
+    "expires" : "2021-01-11T14:50:05.191"
+  } ]
+}
