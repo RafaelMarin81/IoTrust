@@ -4,7 +4,7 @@
 
 ### How this portable Arduino IDE distribution was created
 
-- The directory `arduino-1.8.13/` contains a distributable and portable
+- The directory `tools/arduino-1.8.13/` contains a distributable and portable
   linux `amd64` ArduinoIDE development environment.
 
 - The major advantage of a portable ArduinoIDE distribution like this is that
@@ -16,7 +16,7 @@
 - **NOTE** the procedure described in this section has already been performed
   once at the begining of the project. The guide is kept here for reference.
 
-- The contents of `arduino-1.8.13/` are created as follows:
+- The contents of `tools/arduino-1.8.13/` are created as follows:
 
 - Download the distribution from the official webpage:
 
