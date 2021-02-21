@@ -78,9 +78,10 @@ wget https://github.com/axelelettronica/sme-rn4870-library/archive/v1.0.0.zip
 ## Contributor
 
 [asvin](https://asvin.io)\
-[Odins](https://www.odins.es)\
+[Odins](https://www.odins.es)
 
 ## License
+The project is developed under the Apache License, Version 2.0(Apache-2.0), located in the [LICENSE](LICENSE) file.
 
 ## Contact
 
