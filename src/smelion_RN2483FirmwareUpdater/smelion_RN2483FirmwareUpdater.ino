@@ -253,6 +253,33 @@ void loop()
         LORA_STREAM.end();
         LORA_STREAM.begin(bootloader.getDefaultApplicationBaudRate());
         sodaq_wdt_safe_delay(100);
+        /*
+         * NOTE
+         *
+         * Apparently, with some devices/setups the line `LORA_STREAM.flush();` will prevent the
+         * firmware from continuing and, as a result, no more messages are
+         * printed in the serial console to the user.
+         * 
+         * Normally, if you run the firmware for the first time, the the RN2483 is working
+         * in Application Mode (as opposed to bootloader mode) and you're supposed to see
+         * these messages:
+         * 
+         * ```
+         * consolePrintln("\n* The module is in Application mode: ");
+         * consolePrintln(applicationResetResponse);
+         * 
+         * consolePrintln("\nReady to start firmware update...");
+         * consolePrint("Firmware Image: ");
+         * consolePrintln(HexFileImageName);
+         * consolePrintln("\nPlease press \'c\' to continue...");
+         * ```
+         * 
+         * If you don't see the console messages asking the user to type 'c' in order to
+         * continue, comment the `LORA_STREAM.flush();` and program the device again.
+         * 
+         * - Reference. Rahul Karade at ASVIN
+         *
+         */
         LORA_STREAM.flush();
         
         char applicationResetResponse[64];

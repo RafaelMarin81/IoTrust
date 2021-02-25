@@ -268,10 +268,39 @@ In case there is something wrong after the module's application has been erased 
 
 ## Known Issues
 
+The `LORA_STREAM.flush();` issue:
+
+- Apparently, with some devices/setups the line `LORA_STREAM.flush();` will prevent the
+firmware from continuing and, as a result, no more messages are
+printed in the serial console to the user.
+
+Normally, if you run the firmware for the first time, the the RN2483 is working
+in Application Mode (as opposed to bootloader mode) and you're supposed to see
+these messages:
+
+```
+consolePrintln("\n* The module is in Application mode: ");
+consolePrintln(applicationResetResponse);
+
+consolePrintln("\nReady to start firmware update...");
+consolePrint("Firmware Image: ");
+consolePrintln(HexFileImageName);
+consolePrintln("\nPlease press \'c\' to continue...");
+```
+
+If you don't see the console messages asking the user to type 'c' in order to
+continue, comment the `LORA_STREAM.flush();` and program the device again.
+
+- Reference. Rahul Karade at ASVIN
+
+----------
+
 - It seems that sometimes the RN2483 might get stuck into bootloader
 mode after the sketch finished. Normally it would be reset by the SME
 Lion MCU and put back into *application* mode. If that happens, it will not
 answer any text commands (e.g. `sys get ver`, `mac get dr`).
+
+----------
 
 - If something goes wrong, try running the sketch again in bootloader mode,
 type a `b` during the first 5 seconds in the Serial Monitor.
