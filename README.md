@@ -84,5 +84,5 @@ wget https://github.com/axelelettronica/sme-rn4870-library/archive/v1.0.0.zip
 
 ## Contact
 
-[Mirko Ross](m.ross@asvin.io) from [asvin](https://asvin.io)\
+[Mirko Ross](m.ross@asvin.io) from DigitalWorx and [Asvin](https://asvin.io)\
 [Rafael Marin-Perez](https://www.odins.es) from [Odins](https://www.odins.es)
